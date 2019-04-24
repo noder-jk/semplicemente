@@ -1,0 +1,20 @@
+{
+  "name": "semplicemente",
+  "version": "1.0.0",
+  "main": "index.njs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel react-dev --out-dir react --copy-files",
+    "transpile-watch": "babel react-dev --out-dir react --copy-files --watch"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "description": "NodeReactor CMS theme.",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "devDependencies": {}
+}
