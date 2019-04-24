@@ -1,1 +1,1 @@
-# semplicemente
+It's a theme for Node Reactor CMS. Visit <a href="http://nodereactor.com">http://nodereactor.com</a> for details and documentation.
