@@ -25,7 +25,7 @@ class RenderMenus extends Component
 
     render()
     {
-        let {menus=[]}=props;
+        let {menus=[]}=this.props;
 
         let nest=0;
     

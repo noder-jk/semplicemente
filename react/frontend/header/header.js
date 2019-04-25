@@ -60,9 +60,8 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = props,
-          _props$menus = _props.menus,
-          menus = _props$menus === void 0 ? [] : _props$menus;
+      var _this$props$menus = this.props.menus,
+          menus = _this$props$menus === void 0 ? [] : _this$props$menus;
       var nest = 0;
       /* Loop through all menus recursively */
 
