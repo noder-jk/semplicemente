@@ -1,51 +1,72 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import {nr_nav_menu} from 'nodereactor/react';
 
 import './style.scss';
 
-const RenderMenus=(props)=>
+class RenderMenus extends Component
 {
-    let {menus=[]}=props;
-
-    let nest=0;
-
-    /* Loop through all menus recursively */
-    let recurs=(menu)=>
+    constructor(props)
     {
-        if(Array.isArray(menu))
-        {
-            nest++;
-            return  <ul key={menu.key} className={nest<=1 ? 'main-menu clearfix' : 'sub-menu'}>
-                        {menu.map(m=>recurs(m))}
-                    </ul>
-        }
-        else if(typeof menu=='object')
-        {
-            return  <li key={menu.key}>
-                        {
-                            (Array.isArray(menu.children) && menu.children.length>0) ? 
-                            [<a key="toggler_a" href={menu.url}>{menu.title}
-                                <span className="drop-icon">▾</span>
-                                <label title="Toggle Drop-down" className="drop-icon" htmlFor={menu.key}> ▾</label>
-                            </a>,
-                            <input key="toggler_inp" type="checkbox" id={menu.key}/>] : 
-                            <a href={menu.url}>{menu.title}</a>
-                        }
-                        
-                        {(Array.isArray(menu.children) && menu.children.length>0) ? recurs(menu.children) : null}
-                    </li>
-        }
+        super(props);
 
-        return null;
+        this.handleClick=this.handleClick.bind(this);
     }
     
-    return <nav id="menu">
-            <label htmlFor="top_menu_toggler" id="toggle-menu">Navigation <span className="drop-icon">▾</span></label>
-            <input type="checkbox" id="top_menu_toggler"/>
+    handleClick(e)
+    {
+        let el=e.currentTarget;
+        
+        if(!el.href || /\S+/.test(el.href)==false || el.href=='#')
+        {
+            e.preventDefault();
+        }
+    }
 
-            {menus.map(item=>recurs(item))}
-        </nav>
+    render()
+    {
+        let {menus=[]}=props;
+
+        let nest=0;
+    
+        /* Loop through all menus recursively */
+        let recurs=(menu)=>
+        {
+            if(Array.isArray(menu))
+            {
+                nest++;
+                return  <ul key={menu.key} className={nest<=1 ? 'main-menu clearfix' : 'sub-menu'}>
+                            {menu.map(m=>recurs(m))}
+                        </ul>
+            }
+            else if(typeof menu=='object')
+            {
+                return  <li key={menu.key}>
+                            {
+                                (Array.isArray(menu.children) && menu.children.length>0) ? 
+                                [<a onClick={this.handleClick} key="toggler_a" href={menu.url}>{menu.title}
+                                    <span className="drop-icon">▾</span>
+                                    <label title="Toggle Drop-down" className="drop-icon" htmlFor={menu.key}> ▾</label>
+                                </a>,
+                                <input key="toggler_inp" type="checkbox" id={menu.key}/>] : 
+                                <a onClick={this.handleClick} href={menu.url}>{menu.title}</a>
+                            }
+                            
+                            {(Array.isArray(menu.children) && menu.children.length>0) ? recurs(menu.children) : null}
+                        </li>
+            }
+    
+            return null;
+        }
+        
+        return <nav id="menu">
+                <label htmlFor="top_menu_toggler" id="toggle-menu">Navigation <span className="drop-icon">▾</span></label>
+                <input type="checkbox" id="top_menu_toggler"/>
+    
+                {menus.map(item=>recurs(item))}
+            </nav>
+    }
+    
 }
 
 const Header=()=>

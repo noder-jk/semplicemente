@@ -45,21 +45,7 @@ var Widget = function Widget() {
     type: "submit",
     className: "search-submit",
     value: "Search"
-  }))), _react.default.createElement("aside", {
-    id: "wordjs_mechanism-2",
-    className: "widget widget_wordjs_mechanism"
-  }, _react.default.createElement("div", {
-    className: "widget-title"
-  }, _react.default.createElement("h3", null, "Mechanism")), _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "http://localhost/w5/2019/03/15/sdf/"
-  }, "sdf")), _react.default.createElement("li", null, _react.default.createElement("a", {
-    href: "http://localhost/w5/2019/03/15/df/"
-  }, _react.default.createElement("b", {
-    "data-element": "current_post",
-    style: {
-      "color": "#006469"
-    }
-  }, "df"))))), (0, _react2.dynamic_sidebar)('right_side_panel_theme', SdContainer));
+  }))), (0, _react2.dynamic_sidebar)('right_side_panel_theme', SdContainer));
 };
 
 exports.Widget = Widget;
