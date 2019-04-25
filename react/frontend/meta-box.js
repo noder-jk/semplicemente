@@ -7,7 +7,7 @@ exports.TestComponentInput = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -51,12 +51,12 @@ function (_Component) {
           post_id = _this$props$post_id === void 0 ? 0 : _this$props$post_id,
           _this$props$post_meta = _this$props.post_meta,
           post_meta = _this$props$post_meta === void 0 ? {} : _this$props$post_meta;
-      return _react.default.createElement("div", null, "You are editing ", post_id, _react.default.createElement("input", {
+      return _react["default"].createElement("div", null, "You are editing ", post_id, _react["default"].createElement("input", {
         type: "text",
         className: "form-control",
         name: "save_me_test",
         defaultValue: post_meta.save_me_test
-      }), _react.default.createElement("input", {
+      }), _react["default"].createElement("input", {
         type: "text",
         className: "form-control",
         name: "no_save",

@@ -6,22 +6,11 @@ module.exports.run=function($, next)
 		'widgets_init',
 		function($, next)
 		{
-			$=register_sidebar($, {'title':'Right Panel', 'id':'right_side_panel_theme'});
+			$=register_sidebar($, {'title':'Right Column', 'id':'right_side_panel_theme'});
 			next($);
 		}
 	);
 	
-	$=add_action
-	(
-		$,
-		'widgets_init',
-		function($, next)
-		{
-			$=register_sidebar($, {'title':'Right Panel2', 'id':'right_side_panel_theme2'});
-			next($);
-		}
-	);
-
 	$=add_action($,'register_nav_menus',function($, next)
 	{
 		$=register_nav_menu($, {'id':'semp_nav_menu', 'title':'Top Nav Bar', 'description':'This menu location is registered from Semplicemente'});

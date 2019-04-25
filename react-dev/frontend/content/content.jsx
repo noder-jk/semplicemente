@@ -78,30 +78,32 @@ const Content=(props)=>
                 }  
                 
 
-                <nav className="navigation post-navigation">
-                    <h2 className="screen-reader-text">Post navigation</h2>
-                    <div className="nav-links">
-                        <div className="nav-previous">
-                            {
-                                prev_url ? 
-                                <a href={prev_url} rel="prev">
-                                    <i className="fa spaceRight fa-angle-double-left"></i> Previous
-                                </a> :
-                                <a href="#" rel="next">&nbsp;</a>
-                            }
-                            
+                {
+                    (prev_url || next_url) ? <nav className="navigation post-navigation">
+                        <h2 className="screen-reader-text">Post navigation</h2>
+                        <div className="nav-links">
+                            <div className="nav-previous">
+                                {
+                                    prev_url ? 
+                                    <a href={prev_url} rel="prev">
+                                        <i className="fa spaceRight fa-angle-double-left"></i> Previous
+                                    </a> :
+                                    <a href="#" rel="next">&nbsp;</a>
+                                }
+                                
+                            </div>
+                            <div className="nav-next">
+                                {
+                                    next_url ? 
+                                    <a href={next_url} rel="prev">
+                                        Next <i className="fa spaceRight fa-angle-double-right"></i>
+                                    </a> : 
+                                    <a href="#" rel="next">&nbsp;</a>
+                                }
+                            </div>
                         </div>
-                        <div className="nav-next">
-                            {
-                                next_url ? 
-                                <a href={next_url} rel="prev">
-                                    Next <i className="fa spaceRight fa-angle-double-right"></i>
-                                </a> : 
-                                <a href="#" rel="next">&nbsp;</a>
-                            }
-                        </div>
-                    </div>
-                </nav>
+                    </nav> : null
+                }
             </main>
         </div>
     )

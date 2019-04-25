@@ -29,7 +29,7 @@ require("./frontend/resources/style.scss");
 
 require("./frontend/resources/css/font-awesome.css");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -63,18 +63,18 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return _react["default"].createElement("div", {
         className: "container",
         id: "Test-1-theme_container"
-      }, _react.default.createElement(_react2.AdminBar, null), _react.default.createElement("div", {
+      }, _react["default"].createElement(_react2.AdminBar, null), _react["default"].createElement("div", {
         className: "post-template-default single single-post postid-7 single-format-standard logged-in admin-bar  customize-support"
-      }, _react.default.createElement("div", {
+      }, _react["default"].createElement("div", {
         id: "page",
         className: "hfeed site"
-      }, _react.default.createElement(_header.Header, null), _react.default.createElement("div", {
+      }, _react["default"].createElement(_header.Header, null), _react["default"].createElement("div", {
         id: "content",
         className: "site-content"
-      }, _react.default.createElement(_content.Content, this.props), _react.default.createElement(_widget.Widget, null)), _react.default.createElement(_footer.Footer, null))));
+      }, _react["default"].createElement(_content.Content, this.props), _react["default"].createElement(_widget.Widget, null)), _react["default"].createElement(_footer.Footer, null))));
     }
   }]);
 

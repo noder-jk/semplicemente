@@ -1,6 +1,7 @@
 import React from 'react';
 import {dynamic_sidebar} from 'nodereactor/react';
 
+/* Output widget */
 const SdContainer=(props)=>
 {
     let {title='', children=null}=props;
@@ -17,13 +18,14 @@ const Widget=()=>
 {
     return(
         <div id="secondary" className="widget-area">
-            <aside id="search-2" className="widget widget_search">
+            <aside className="widget widget_search">
                 <form role="search" method="get" className="search-form" action="/">
                     <input type="search" className="search-field" placeholder="Search …" name="search"/>
                     <input type="submit" className="search-submit" value="Search"/>
                 </form>
             </aside>
         
+            {/* Now load dynamic widgets */}
             {dynamic_sidebar('right_side_panel_theme', SdContainer)}
         </div>
     )

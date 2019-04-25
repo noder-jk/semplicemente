@@ -11,7 +11,7 @@ var _react2 = require("nodereactor/react");
 
 require("./style.scss");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -68,30 +68,30 @@ function (_Component) {
       var recurs = function recurs(menu) {
         if (Array.isArray(menu)) {
           nest++;
-          return _react.default.createElement("ul", {
+          return _react["default"].createElement("ul", {
             key: menu.key,
             className: nest <= 1 ? 'main-menu clearfix' : 'sub-menu'
           }, menu.map(function (m) {
             return recurs(m);
           }));
         } else if (_typeof(menu) == 'object') {
-          return _react.default.createElement("li", {
+          return _react["default"].createElement("li", {
             key: menu.key
-          }, Array.isArray(menu.children) && menu.children.length > 0 ? [_react.default.createElement("a", {
+          }, Array.isArray(menu.children) && menu.children.length > 0 ? [_react["default"].createElement("a", {
             onClick: _this2.handleClick,
             key: "toggler_a",
             href: menu.url
-          }, menu.title, _react.default.createElement("span", {
+          }, menu.title, _react["default"].createElement("span", {
             className: "drop-icon"
-          }, "\u25BE"), _react.default.createElement("label", {
+          }, "\u25BE"), _react["default"].createElement("label", {
             title: "Toggle Drop-down",
             className: "drop-icon",
             htmlFor: menu.key
-          }, " \u25BE")), _react.default.createElement("input", {
+          }, " \u25BE")), _react["default"].createElement("input", {
             key: "toggler_inp",
             type: "checkbox",
             id: menu.key
-          })] : _react.default.createElement("a", {
+          })] : _react["default"].createElement("a", {
             onClick: _this2.handleClick,
             href: menu.url
           }, menu.title), Array.isArray(menu.children) && menu.children.length > 0 ? recurs(menu.children) : null);
@@ -100,14 +100,14 @@ function (_Component) {
         return null;
       };
 
-      return _react.default.createElement("nav", {
+      return _react["default"].createElement("nav", {
         id: "menu"
-      }, _react.default.createElement("label", {
+      }, _react["default"].createElement("label", {
         htmlFor: "top_menu_toggler",
         id: "toggle-menu"
-      }, "Navigation ", _react.default.createElement("span", {
+      }, "Navigation ", _react["default"].createElement("span", {
         className: "drop-icon"
-      }, "\u25BE")), _react.default.createElement("input", {
+      }, "\u25BE")), _react["default"].createElement("input", {
         type: "checkbox",
         id: "top_menu_toggler"
       }), menus.map(function (item) {
@@ -120,19 +120,19 @@ function (_Component) {
 }(_react.Component);
 
 var Header = function Header() {
-  return _react.default.createElement("header", {
+  return _react["default"].createElement("header", {
     id: "masthead",
     className: "site-header semp-header"
-  }, _react.default.createElement("div", {
+  }, _react["default"].createElement("div", {
     className: "site-branding"
-  }, _react.default.createElement("p", {
+  }, _react["default"].createElement("p", {
     className: "site-title"
-  }, _react.default.createElement("a", {
+  }, _react["default"].createElement("a", {
     href: "/",
     rel: "home"
-  }, "NR")), _react.default.createElement("p", {
+  }, "NR")), _react["default"].createElement("p", {
     className: "site-description"
-  }, "Just another WordPress site")), _react.default.createElement("div", {
+  }, "Just another WordPress site")), _react["default"].createElement("div", {
     style: {
       'clear': 'both'
     }
