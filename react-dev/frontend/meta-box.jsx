@@ -7,11 +7,6 @@ class TestComponentInput extends Component
         super(props);
     }
 
-    componentDidUpdate()
-    {
-        console.log('test meta box also updated');
-    }
-
     render()
     {
         let {post_id=0, post_meta={}}=this.props;

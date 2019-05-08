@@ -39,11 +39,6 @@ function (_Component) {
   }
 
   _createClass(TestComponentInput, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      console.log('test meta box also updated');
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
