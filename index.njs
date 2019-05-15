@@ -1,19 +1,22 @@
 module.exports.run=function($, next)
 {
-	$=add_action
-	(
-		$,
-		'widgets_init',
-		function($, next)
-		{
-			$=register_sidebar($, {'title':'Right Column', 'id':'right_side_panel_theme'});
-			next($);
-		}
-	);
-	
-	$=add_action($,'register_nav_menus',function($, next)
+	$.add_action('widgets_init', function($, next)
 	{
-		$=register_nav_menu($, {'id':'semp_nav_menu', 'title':'Top Nav Bar', 'description':'This menu location is registered from Semplicemente'});
+		$.register_sidebar({'title':'Right Column', 'id':'right_side_panel_theme'});
+		next($);
+	});
+	
+	$.add_action('register_nav_menus',function($, next)
+	{
+		var ob=
+		{
+			'id':'semp_nav_menu', 
+			'title':'Top Nav Bar', 
+			'description':'This menu location is registered from Semplicemente'
+		}
+
+		$.register_nav_menu(ob);
+		
 		next($);
 	});
 
@@ -28,10 +31,11 @@ module.exports.run=function($, next)
 			'dir':__dirname
 		}
 
-		$=register_post_module($,box);
+		$.register_post_module(box);
+
 		next($);
 	}
-	$=add_action($, 'register_post_modules', meta_field);
+	$.add_action('register_post_modules', meta_field);
 
 	function reg_mods($, next)
 	{
@@ -41,11 +45,11 @@ module.exports.run=function($, next)
 			'modules':['meta_field_id']
 		}
 
-		$=use_post_module($, ob);
+		$.use_post_module(ob);
 
 		next($);
 	}
-	$=add_action($, 'use_post_modules', reg_mods);
+	$.add_action('use_post_modules', reg_mods);
 
 	
 	function set_template($, next)
@@ -61,7 +65,7 @@ module.exports.run=function($, next)
 
 		next($);
 	}
-	$=add_action($, 'register_custom_templates', set_template);
+	$.add_action('register_custom_templates', set_template);
 
 	next($);
 }
