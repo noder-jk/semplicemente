@@ -136,7 +136,7 @@ var Header = function Header() {
     style: {
       'clear': 'both'
     }
-  }, (0, _react2.nr_nav_menu)({
+  }, (0, _react2.nav_menu)({
     'id': 'semp_nav_menu',
     'Renderer': RenderMenus
   })));

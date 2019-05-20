@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {nr_nav_menu} from 'nodereactor/react';
+import {nav_menu} from 'nodereactor/react';
 
 import './style.scss';
 
@@ -79,7 +79,7 @@ const Header=()=>
             </div>
             
             <div style={{'clear':'both'}}>
-                {nr_nav_menu({'id':'semp_nav_menu', 'Renderer':RenderMenus})}
+                {nav_menu({'id':'semp_nav_menu', 'Renderer':RenderMenus})}
             </div>
         </header>
     )

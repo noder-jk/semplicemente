@@ -9,7 +9,7 @@ Object.defineProperty(exports, "TestComponentInput", {
     return _metaBox.TestComponentInput;
   }
 });
-exports.Index = void 0;
+exports.TestShortCode = exports.Index = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -82,3 +82,9 @@ function (_Component) {
 }(_react.Component);
 
 exports.Index = Index;
+
+var TestShortCode = function TestShortCode(props) {
+  return _react["default"].createElement("div", null, "My short code ", props.name || '');
+};
+
+exports.TestShortCode = TestShortCode;

@@ -37,4 +37,9 @@ class Index extends Component
     }
 }
 
-export {Index, TestComponentInput}
+const TestShortCode=(props)=>
+{
+    return <div>My short code {props.name || ''}</div>
+}
+
+export {Index, TestComponentInput, TestShortCode}

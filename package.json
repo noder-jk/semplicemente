@@ -24,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/noder-jk/semplicemente/issues"
   },
-  "homepage": "https://github.com/noder-jk/semplicemente#readme"
+  "homepage": "https://github.com/noder-jk/semplicemente#readme",
+  "keywords": [
+    "theme",
+    "wordpress",
+    "nodereactor",
+    "extension",
+    "react",
+    "mysql",
+    "dynamic"
+  ]
 }
