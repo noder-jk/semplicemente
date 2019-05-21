@@ -69,7 +69,7 @@ function (_Component) {
         if (Array.isArray(menu)) {
           nest++;
           return _react["default"].createElement("ul", {
-            key: menu.key,
+            key: 'nest_' + nest,
             className: nest <= 1 ? 'main-menu clearfix' : 'sub-menu'
           }, menu.map(function (m) {
             return recurs(m);

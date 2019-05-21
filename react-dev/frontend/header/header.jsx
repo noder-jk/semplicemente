@@ -35,7 +35,7 @@ class RenderMenus extends Component
             if(Array.isArray(menu))
             {
                 nest++;
-                return  <ul key={menu.key} className={nest<=1 ? 'main-menu clearfix' : 'sub-menu'}>
+                return  <ul key={'nest_'+nest} className={nest<=1 ? 'main-menu clearfix' : 'sub-menu'}>
                             {menu.map(m=>recurs(m))}
                         </ul>
             }
