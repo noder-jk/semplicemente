@@ -54,10 +54,10 @@ var Index =
 function (_Component) {
   _inherits(Index, _Component);
 
-  function Index() {
+  function Index(props) {
     _classCallCheck(this, Index);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Index).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
   }
 
   _createClass(Index, [{

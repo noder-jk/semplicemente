@@ -14,26 +14,28 @@ import './frontend/resources/css/font-awesome.css';
 
 class Index extends Component
 {
+    constructor(props)
+    {
+        super(props);
+    }
+
     render()
     {
-        return(
-            <div className="container" id="Test-1-theme_container">
-                <AdminBar/>
-                <div className="post-template-default single single-post postid-7 single-format-standard logged-in admin-bar  customize-support">
-                    <div id="page" className="hfeed site">
-                        <Header/>
+        return <div className="container" id="Test-1-theme_container">
+            <AdminBar/>
+            <div className="post-template-default single single-post postid-7 single-format-standard logged-in admin-bar  customize-support">
+                <div id="page" className="hfeed site">
+                    <Header/>
+                    
+                    <div id="content" className="site-content">
+                        <Content {...this.props}/>
                         
-                        <div id="content" className="site-content">
-                            <Content {...this.props}/>
-                            
-                            <Widget/>
-                        </div>
-
-                        <Footer/>
+                        <Widget/>
                     </div>
+                    <Footer/>
                 </div>
             </div>
-        )
+        </div>
     }
 }
 
