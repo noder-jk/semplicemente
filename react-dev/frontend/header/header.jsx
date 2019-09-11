@@ -71,18 +71,20 @@ class RenderMenus extends Component
 
 const Header=()=>
 {
-    return(
-        <header id="masthead" className="site-header semp-header">
-            <div className="site-branding">
-                <p className="site-title"><a href="/" rel="home">NR</a></p>
-                <p className="site-description">Just another WordPress site</p>
-            </div>
-            
-            <div style={{'clear':'both'}}>
-                {nav_menu({'id':'semp_nav_menu', 'Renderer':RenderMenus})}
-            </div>
-        </header>
-    )
+    let {name='', description=''}=window.nr_contents.bloginfo || {};
+
+    return <header id="masthead" className="site-header semp-header">
+        <div className="site-branding">
+            <p className="site-title">
+                <a href="/" rel="home">{name}</a>
+            </p>
+            <p className="site-description">{description}</p>
+        </div>
+        
+        <div style={{'clear':'both'}}>
+            {nav_menu({'id':'semp_nav_menu', 'Renderer':RenderMenus})}
+        </div>
+    </header>
 }
 
 export {Header}

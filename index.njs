@@ -64,10 +64,11 @@ module.exports.run=function($, next)
 			'package':'semplicemente'
 		}
 		
-		$=register_custom_template($, ob);
+		$.register_custom_template(ob);
 
 		next($);
 	}
+	
 	$.add_action('register_custom_templates', set_template);
 
 	// go next add-on's functionalities

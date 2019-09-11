@@ -8,6 +8,7 @@ import {Footer} from './frontend/footer';
 import {TestComponentInput} from './frontend/meta-box';
 
 import {AdminBar} from 'nodereactor/react';
+/* import {Subscriber, showNotification} from 'push-notifier/react'; */
 
 import './frontend/resources/style.scss';
 import './frontend/resources/css/font-awesome.css';
@@ -35,6 +36,8 @@ class Index extends Component
                     <Footer/>
                 </div>
             </div>
+            {/* <button onClick={()=>showNotification({'title':'something'})}>Local</button>
+            <Subscriber/> */}
         </div>
     }
 }
@@ -44,4 +47,10 @@ const TestShortCode=(props)=>
     return <div>My short code {props.name || ''}</div>
 }
 
-export {Index, TestComponentInput, TestShortCode}
+const TestCustomTemplate=(props)=>
+{
+    console.log(props);
+    return <div>Hi this is cust</div>
+}
+
+export {Index, TestComponentInput, TestShortCode, TestCustomTemplate}
