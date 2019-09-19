@@ -3,7 +3,12 @@ module.exports.run=function($, next)
 	// register an widget area
 	$.add_action('widgets_init', function($, next)
 	{
-		$.register_sidebar({'title':'Right Column', 'id':'right_side_panel_theme'});
+		$.register_sidebar
+		({
+			'title':'Right Column', 
+			'id':'right_side_panel_theme'
+		});
+
 		next($);
 	});
 	
@@ -55,7 +60,7 @@ module.exports.run=function($, next)
 	$.add_action('use_meta_boxes', reg_mods); */
 
 	// register a custom template at runtime for posts
-	function set_template($, next)
+	/* function set_template($, next)
 	{
 		var ob=
 		{
@@ -70,7 +75,7 @@ module.exports.run=function($, next)
 	}
 	
 	$.add_action('register_custom_templates', set_template);
-
+ */
 	// go next add-on's functionalities
 	next($);
 }

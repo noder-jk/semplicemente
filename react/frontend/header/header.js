@@ -122,11 +122,11 @@ function (_Component) {
 }(_react.Component);
 
 var Header = function Header() {
-  var _ref = window.nr_contents.bloginfo || {},
-      _ref$name = _ref.name,
-      name = _ref$name === void 0 ? '' : _ref$name,
-      _ref$description = _ref.description,
-      description = _ref$description === void 0 ? '' : _ref$description;
+  var _ref = window.nr_configs || {},
+      _ref$site_name = _ref.site_name,
+      site_name = _ref$site_name === void 0 ? '' : _ref$site_name,
+      _ref$site_description = _ref.site_description,
+      site_description = _ref$site_description === void 0 ? '' : _ref$site_description;
 
   return _react["default"].createElement("header", {
     id: "masthead",
@@ -138,9 +138,9 @@ var Header = function Header() {
   }, _react["default"].createElement("a", {
     href: "/",
     rel: "home"
-  }, name)), _react["default"].createElement("p", {
+  }, site_name)), _react["default"].createElement("p", {
     className: "site-description"
-  }, description)), _react["default"].createElement("div", {
+  }, site_description)), _react["default"].createElement("div", {
     style: {
       'clear': 'both'
     }

@@ -7,7 +7,7 @@
     "transpile": "babel react-dev --out-dir react --copy-files",
     "transpile-watch": "babel react-dev --out-dir react --copy-files --watch"
   },
-  "author": "JK",
+  "author": "JK & CrestaProject",
   "license": "GPL-2.0-or-later",
   "description": "NodeReactor CMS theme.",
   "dependencies": {

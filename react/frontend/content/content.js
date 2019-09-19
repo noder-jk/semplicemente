@@ -13,6 +13,11 @@ require("./style.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+var Bb = function Bb(props) {
+  var children = props.children;
+  return _react["default"].createElement("b", null, children);
+};
+
 var Content = function Content(props) {
   var _props$posts = props.posts,
       posts = _props$posts === void 0 ? [] : _props$posts,
@@ -62,17 +67,9 @@ var Content = function Content(props) {
       className: "url fn n"
     }, (0, _react2.the_author)(item)))))), _react["default"].createElement("div", {
       className: "entry-content"
-    }, is_singular ? (0, _react2.the_content)(item) : (0, _react2.the_excerpt)(item)), _react["default"].createElement("footer", {
+    }, is_singular ? (0, _react2.the_content)(item) : (0, _react2.the_excerpt)(item)), is_singular ? _react["default"].createElement("br", null) : _react["default"].createElement("footer", {
       className: "entry-footer"
-    }, is_singular ? _react["default"].createElement("span", {
-      className: "edit-link floatLeft"
-    }, _react["default"].createElement("i", {
-      className: "fa fa-pencil-square-o spaceRight",
-      "aria-hidden": "true"
-    }), _react["default"].createElement("a", {
-      className: "post-edit-link",
-      href: ""
-    }, "Edit")) : _react["default"].createElement("div", {
+    }, _react["default"].createElement("div", {
       className: "readMoreLink"
     }, _react["default"].createElement("a", {
       href: (0, _react2.the_permalink)(item)

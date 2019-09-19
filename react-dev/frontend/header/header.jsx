@@ -71,14 +71,14 @@ class RenderMenus extends Component
 
 const Header=()=>
 {
-    let {name='', description=''}=window.nr_contents.bloginfo || {};
+    let {site_name='', site_description=''}=window.nr_configs || {};
 
     return <header id="masthead" className="site-header semp-header">
         <div className="site-branding">
             <p className="site-title">
-                <a href="/" rel="home">{name}</a>
+                <a href="/" rel="home">{site_name}</a>
             </p>
-            <p className="site-description">{description}</p>
+            <p className="site-description">{site_description}</p>
         </div>
         
         <div style={{'clear':'both'}}>

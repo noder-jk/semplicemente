@@ -16,6 +16,12 @@ import {
 
 import './style.scss';
 
+const Bb=(props)=>
+{
+    let {children}=props;
+    return <b>{children}</b>
+}
+
 const Content=(props)=>
 {
     let {posts=[], is_singular=false, pagination={}}=props;
@@ -62,7 +68,7 @@ const Content=(props)=>
                                 {is_singular ? the_content(item) : the_excerpt(item)}
                             </div>
 
-                            <footer className="entry-footer">
+                            {/* <footer className="entry-footer">
                                 {
                                     is_singular ? 
                                     <span className="edit-link floatLeft">
@@ -73,7 +79,16 @@ const Content=(props)=>
                                         <a href={the_permalink(item)}>Read More<i className="fa spaceLeft fa-angle-double-right" aria-hidden="true"></i></a>
                                     </div> 
                                 }
-                            </footer>
+                            </footer> */}
+
+                            {
+                                is_singular ? <br/> :
+                                <footer className="entry-footer">
+                                    <div className="readMoreLink">
+                                        <a href={the_permalink(item)}>Read More<i className="fa spaceLeft fa-angle-double-right" aria-hidden="true"></i></a>
+                                    </div> 
+                                </footer>
+                            }
                         </article>
                     )
                 })
@@ -106,7 +121,7 @@ const Content=(props)=>
                     </div>
                 </nav> : null
             }
-            {/* <PaginateLinks pagination={pagination}/> */}
+            {/* <PaginateLinks pagination={pagination} wrapper={Bb} class_name="text-warning"/> */}
         </main>
     </div>
 }
